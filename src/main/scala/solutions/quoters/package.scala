@@ -25,6 +25,7 @@ package object quoters {
   }
   object ShakespearQuoter{
     def unapply(arg: ShakespearQuoter): Option[String] = Some(arg.message)
+
   }
 
   case class MessageQuoter(message: String) extends Quoter

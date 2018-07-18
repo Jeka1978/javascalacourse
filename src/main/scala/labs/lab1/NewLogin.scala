@@ -1,4 +1,4 @@
-package labs
+package labs.lab1
 
 /**
   * @author Evgeny Borisov

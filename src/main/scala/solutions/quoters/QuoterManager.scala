@@ -2,6 +2,7 @@ package solutions.quoters
 
 import javax.swing.JOptionPane
 import pimp_my_library.CustomFunctionsBiner._
+
 /**
   * @author Evgeny Borisov
   */
