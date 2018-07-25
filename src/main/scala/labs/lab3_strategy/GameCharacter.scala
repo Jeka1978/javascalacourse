@@ -17,6 +17,10 @@ trait GameCharacter {
   override def toString: String = s"${getClass.getSimpleName} $name hp:$hp power:$power alive:$isAlive"
 
   def getNumberBetween(min: Int = 0, max: Int): Int = {
-    min + Random.nextInt(max - min) + 1
+    RandomFactory.getNumberBetween(min,max)
   }
 }
+
+
+
+
