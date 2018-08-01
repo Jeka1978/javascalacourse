@@ -12,16 +12,15 @@ object RandomFactory {
   def getNumberBetween(min: Int = 0, max: Int): Int = {
     min + Random.nextInt(max - min) + 1
   }
-  val characterClasses = List(classOf[Troll],classOf[Knight],classOf[Hobbit],classOf[Elf])
-
+  val characterClasses = ClassScanner.findSubtypes(classOf[GameCharacter])
   def generateRandomCharacter():GameCharacter={
     val i = Random.nextInt(characterClasses.length)
     val characterClass = characterClasses(i)
-    val contructor = characterClass.getConstructors.head
-    if(contructor.getParameterCount==0) {
+    val constructor = characterClass.getConstructors.head
+    if(constructor.getParameterCount==0) {
       characterClass.newInstance()
     }else{
-       contructor.newInstance(datafactory.getName).asInstanceOf[GameCharacter]
+       constructor.newInstance(datafactory.getName).asInstanceOf[GameCharacter]
     }
   }
 }

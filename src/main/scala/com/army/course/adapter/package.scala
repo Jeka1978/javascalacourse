@@ -6,7 +6,6 @@ import com.army.course.adapter.Item.LocalValue
   * @author Evgeny Borisov
   */
 
-//я правильно понимаю, что больше, чем один package object на пакет делать нельзя
 package object adapter {
 
   trait Thing {

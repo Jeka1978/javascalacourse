@@ -7,6 +7,13 @@ import labs.lab3_strategy.RandomFactory._
   */
 object Start {
   def main(args: Array[String]): Unit = {
-      GameManager.playGame(generateRandomCharacter(),generateRandomCharacter())
+    println(generateRandomCharacter())
+    println(generateRandomCharacter())
+    println(generateRandomCharacter())
+    println(generateRandomCharacter())
+    println(generateRandomCharacter())
+    println(generateRandomCharacter())
+    println(generateRandomCharacter())
+//      GameManager.playGame(generateRandomCharacter(),generateRandomCharacter())
   }
 }
