@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="terminator" class="real_spring.Terminator"/>
+
+
+    <bean id="speaker" class="my_spring.ConsoleSpeaker"/>
+    <bean id="cleaner" class="my_spring.CleanerImpl"/>
+
+    <bean id="iRobot" class="my_spring.IRobot">
+        <property name="cleaner" ref="cleaner"/>
+        <property name="speaker" ref="speaker"/>
+    </bean>
+
+
+</beans>
